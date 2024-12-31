@@ -10,12 +10,14 @@ namespace MyUserManagementApp
         {
             base.OnStartup(e);
 
-            // 初始化数据库
-            Database.SetInitializer(new Data.UserManagementInitializer());
-            using (var context = new Data.UserManagementContext())
-            {
-                context.Database.Initialize(false);
-            }
+            //// 初始化数据库
+            //Database.SetInitializer(new Data.UserManagementInitializer());
+            //using (var context = new Data.UserManagementContext())
+            //{
+            //    context.Database.Initialize(false);
+            //}
+
+
         }
     }
 }
