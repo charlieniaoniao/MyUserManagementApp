@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using MyUserManagementApp.Services;
+using System.Windows;
 
 namespace MyUserManagementApp
 {
@@ -8,6 +9,12 @@ namespace MyUserManagementApp
         {
             InitializeComponent();
             DataContext = new ViewModels.UserManagementViewModel();
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var client = new TestClient();
+            await client.InitHubConnectionAsync();
         }
     }
 }
